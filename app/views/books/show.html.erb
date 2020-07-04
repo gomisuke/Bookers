@@ -1,9 +1,12 @@
 <div class="show">
+	<% if flash[:notice] %>
+		<P class="flash"><%= flash[:notice] %></P>
+	<% end %>
 	<p><span>Title: </span><%= @book.title %></p>
 	<p><span>Body: </span><%= @book.body %></p>
 </div>
 <div class="page-btn">
-	<%= link_to "Edit", edit_book_path,class:"edit-btn btn" %>
+	<%= link_to "Edit", edit_book_path, class:"edit-btn btn" %>
 	<p>|</p>
 	<%= link_to "Back", books_path, class:"back-btn btn" %>
 </div>
